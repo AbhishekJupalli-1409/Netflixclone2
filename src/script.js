@@ -1,5 +1,5 @@
 //api key from TMDB
-const api = "api_key=4a0f8eb0308c6a069d518c17f1465a55";
+const api = "api_key=a86be21d3353dab87e086b1c67afd4e9";
 
 //base url
 const base_url = "https://api.themoviedb.org/3";
@@ -38,12 +38,14 @@ function truncate(str, n) {
 }
 
 //banner
-fetch(requests.fetchNetflixOriginals)
-    .then((res) => res.json())
-    .then((data) => {
-        const results = data.results;
-        if (results && results.length > 0) {
-            const setMovie = results[Math.floor(Math.random() * results.length)];
+const NetflixOriginalsBanner = async () =>{
+try {
+    const res = await axios.get(requests.fetchNetflixOriginals);
+    console.log(res);
+        const results1 = res.data.results;
+    console.log(results1);
+        if (results1 && results1.length > 0) {
+            const setMovie = results1[Math.floor(Math.random() * results1.length)];
             var banner = document.getElementById("banner");
             var banner_title = document.getElementById("banner_title");
             var banner_desc = document.getElementById("banner_description");
@@ -54,14 +56,21 @@ fetch(requests.fetchNetflixOriginals)
         } else {
             console.error("No results found.");
         }
-    })
-    .catch((error) => console.error("Error fetching Netflix Originals:", error));
+    }
+    catch (e) { console.error("Error fetching Netflix Originals:", e) };
+}
+NetflixOriginalsBanner();
+
 
 // movie row
-fetch(requests.fetchNetflixOriginals)
-    .then((res) => res.json())
-    .then((data) => {
-        const results = data.results;
+
+
+const NetflixOriginals = async () => {
+    try {
+        const res = await axios.get(requests.fetchNetflixOriginals);
+        console.log(res);
+        const results = res.data.results;
+   
         const headrow = document.getElementById("headrow");
 
         // Create row div
@@ -89,16 +98,19 @@ fetch(requests.fetchNetflixOriginals)
             poster.src = image_url + movie.poster_path;
             row_posters.appendChild(poster);
         });
-    })
-    .catch((error) => console.error("Error fetching Netflix Originals:", error));
+    }
+    catch (error) { console.error("Error fetching Netflix Originals:", error) };
+    ActionMovies();
+}
+NetflixOriginals();
 
 
+//Action Movies
 
-
-fetch(requests.fetchActionMovies)
-    .then((res) => res.json())
-    .then((data) => {
-        const results = data.results;
+const ActionMovies = async () => {
+    try {
+        const res = await axios.get(requests.fetchActionMovies);
+        const results = res.data.results;
         const headrow = document.getElementById("headrow");
 
         // Create row div
@@ -128,18 +140,21 @@ fetch(requests.fetchActionMovies)
                 row_posters.appendChild(poster);
             }
         });
-    })
-    .catch((error) => console.error("Error fetching Action Movies:", error));
+    }
+    catch (error) { console.error("Error fetching Action Movies:", error) };
+    ComedyMovies();
+}
+
 
 
 
 
 // COMEDY MOVIES
 
-fetch(requests.fetchComedyMovies)
-    .then((res) => res.json())
-    .then((data) => {
-        const results = data.results;
+const ComedyMovies = async () => {
+    try {
+        const res = await axios.get(requests.fetchComedyMovies);
+        const results = res.data.results;
         const headrow = document.getElementById("headrow");
 
         // Create row div
@@ -169,12 +184,25 @@ fetch(requests.fetchComedyMovies)
                 row_posters.appendChild(poster);
             }
         });
-    })
-    .catch((error) => console.error("Error fetching Action Movies:", error));
-fetch(requests.fetchTrending)
-    .then((res) => res.json())
-    .then((data) => {
-        const results = data.results;
+    }
+    catch { (error) => console.error("Error fetching Action Movies:", error) };
+    TrendingMovies();
+}
+
+
+
+
+
+
+//Trending Movies
+
+
+
+const TrendingMovies = async () => {
+    try {
+        const res = await axios.get(requests.fetchTrending);
+        const results = res.data.results;
+     
         const headrow = document.getElementById("headrow");
 
         // Create row div
@@ -204,18 +232,22 @@ fetch(requests.fetchTrending)
                 row_posters.appendChild(poster);
             }
         });
-    })
-    .catch((error) => console.error("Error fetching Action Movies:", error));
+    }
+    catch (error) { console.error("Error fetching Action Movies:", error) };
+    HorrorMovies();
+}
+
+
 
 
 
 
 //HORROR MOVIES
 
-fetch(requests.fetchHorrorMovies)
-    .then((res) => res.json())
-    .then((data) => {
-        const results = data.results;
+const HorrorMovies = async () => {
+    try {
+        const res = await axios.get(requests.fetchHorrorMovies);
+        const results = res.data.results;
         const headrow = document.getElementById("headrow");
 
         // Create row div
@@ -245,18 +277,22 @@ fetch(requests.fetchHorrorMovies)
                 row_posters.appendChild(poster);
             }
         });
-    })
-    .catch((error) => console.error("Error fetching Action Movies:", error));
+    }
+    catch (error) { console.error("Error fetching Action Movies:", error) };
+    
+RomanceMovies(); 
+}
 
 
 
-//
 
+//Romance Movies
 
-fetch(requests.fetchRomanceMovies)
-    .then((res) => res.json())
-    .then((data) => {
-        const results = data.results;
+    
+const RomanceMovies = async () => {
+    try {
+        const res = await axios.get(requests.fetchRomanceMovies);
+        const results = res.data.results;
         const headrow = document.getElementById("headrow");
 
         // Create row div
@@ -286,16 +322,21 @@ fetch(requests.fetchRomanceMovies)
                 row_posters.appendChild(poster);
             }
         });
-    })
-    .catch((error) => console.error("Error fetching Action Movies:", error));
+    }
+    catch (error) { console.error("Error fetching Action Movies:", error) };
+    Documentaries();
+}
 
 
 
+//Fecting Documentaries
 
 fetch(requests.fetchDocumentaries)
-    .then((res) => res.json())
-    .then((data) => {
-        const results = data.results;
+   
+const Documentaries = async () => {
+    try {
+        const res = await axios.get(requests.fetchDocumentaries);
+        const results = res.data.results;
         const headrow = document.getElementById("headrow");
 
         // Create row div
@@ -325,6 +366,8 @@ fetch(requests.fetchDocumentaries)
                 row_posters.appendChild(poster);
             }
         });
-    })
-    .catch((error) => console.error("Error fetching Action Movies:", error));
+    }
+    catch (error) { console.error("Error fetching Action Movies:", error) };
+}
+
 
