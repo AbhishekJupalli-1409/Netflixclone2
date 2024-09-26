@@ -51,7 +51,7 @@ try {
             var banner_desc = document.getElementById("banner_description");
 
             banner.style.backgroundImage = "url(" + banner_url + setMovie.backdrop_path + ")";
-            banner_desc.innerText = truncate(setMovie.overview, 150);
+            banner_desc.innerText = truncate(setMovie.overview, 200);
             banner_title.innerText = setMovie.title || setMovie.name;
         } else {
             console.error("No results found.");
@@ -137,7 +137,21 @@ const ActionMovies = async () => {
                 var s2 = (movie.title || movie.name).replace(/\s+/g, ""); // Use movie.title for movies
                 poster.id = s2;
                 poster.src = image_url + movie.poster_path;
+                const assumeleft = poster.getBoundingClientRect();
+                console.log(assumeleft.left);
+                console.log(s2);
                 row_posters.appendChild(poster);
+
+
+                const posterdisplay = document.createElement("span");
+                posterdisplay.className = "poster_display";
+                
+                
+               row_posters.appendChild(posterdisplay);
+                const posterdisplayText = document.createElement("span");
+                posterdisplayText.innerText = s2;
+                posterdisplay.appendChild(posterdisplayText)
+                
             }
         });
     }

@@ -2,21 +2,42 @@
     margin: 0px;
     padding: 0px;
 }
-
-body::-webkit-scrollbar {
-    width: 0.23rem;
-    color: #989494;
-
+.row_title{
+  border-left: 1px solid rgb(253, 253, 253);
+  padding: 0.5rem;
+   
 }
 
+
+*{
+  font-family: "Mukta", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+body::-webkit-scrollbar {
+    width: 0.4rem;
+height:40px;
+    color: #000000;
+
+}
+  
 ::-webkit-scrollbar-thumb {
     background-color: rgb(211, 209, 209);
     border-radius: 10px;
+    height:40px;
+    
 }
 
 body {
     font-family: 'Netflix Sans', sans-serif;
     background-color: #111;
+     top: 20px;
+    left: 20px;
+    bottom: 20px;
+    overflow-y: scroll;
 
 }
 
@@ -46,7 +67,7 @@ body {
 }
 
 .nav_logo {
-    width: 100px;
+    width: 7rem;
 
 }
 
@@ -85,6 +106,9 @@ body {
 
 
 }
+#banner_title{
+    font-size: 3.4rem;
+}
 
 .noList2 li {
     margin-left: 20px;
@@ -95,10 +119,39 @@ body {
 
 }
 
+#banner_contents{
+    font-family: 'Times New Roman', Times, serif;
+   
+    background-color:rgba(99, 99, 99, 0.293);
+    border-radius: 0.2rem;
+    
+    
+    
+    
+}
+
 .noList2 li:hover {
     color: #949391;
     cursor: pointer;
     transform: scale(1.1);
+}
+
+.poster_display{
+ display: none;
+    position: relative;
+    margin:0px;
+    padding:0px;
+    left :-10rem;
+    color: #fffbfb;
+    z-index: 20;
+    height: 20rem;
+    width: 30rem;
+    background-color: #949391;
+    opacity: 20%;
+
+}
+.row_poster:hover>.poster_display{
+    display: block;
 }
 
 
@@ -117,7 +170,7 @@ body {
 
 
 .nav_avatar {
-    width: 30px;
+    width: 2rem;
 
 
 }
@@ -175,11 +228,16 @@ body {
 }
 
 #banner_contents {
-    margin-left: 70px;
-    padding-top: 220px;
-    height: 190px;
+  position: relative;
+  top:40%;
+  left: 3%;
+  width: 40%;
+  height: 55%;
+  
 }
-
+#banner_contents>h1,div{
+    padding-left: 1rem;
+}
 
 #banner title {
     font-size: 3rem;
@@ -188,16 +246,18 @@ body {
 }
 
 #banner_description {
-    width: 45rem;
+    width: 50rem;
     line-height: 1.5;
     padding-top: 1rem;
-    font-size: 0.9rem;
-    max-width: 360px;
+    font-size: 1rem;
+    max-width: 90%;
     height: 80px;
 }
 
 
 .play {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 300;
     cursor: pointer;
     color: rgb(32, 31, 31);
     outline: none;
@@ -212,6 +272,7 @@ body {
     padding-top: .5rem;
     background-color: rgba(255, 249, 249, 0.993);
     padding-bottom: 0.5rem;
+    font-size: medium;
     transition: all 0.3s ease-in;
 }
 
@@ -297,11 +358,12 @@ body {
     object-fit: cover;
     width: 100% !important;
     /* or whatever size you want */
-    border-radius: 2px;
+    border-radius: 2px; 
+    
+    
 
-
-    height: 150px;
-    margin-right: 10px;
+    height: 15rem;
+    margin-right: 1rem;
 
     transition: transform 500ms;
 
@@ -312,6 +374,7 @@ img {
     display: block;
     max-width: 100%;
     height: auto;
+     
 }
 
 
@@ -323,8 +386,8 @@ img {
 .row_posterLarge {
     object-fit: contain;
     width: 100%;
-    max-height: 250px;
-    margin-right: 10px;
+    max-height: 20rem;
+    margin-right:1rem;
     border-radius: 2px;
     transition: transform 500ms;
 }
