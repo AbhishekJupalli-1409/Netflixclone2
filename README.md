@@ -4,7 +4,20 @@
 In this project i have used **Axios library** to fetch the images from the tmdb.And *Scrollable genre movie sections* .
 Improved the scroll bar using the <strong>web-scrollkit attribute</strong>
 
-> "Uplaoded my project in Aws s3 [static hosting](https://abhishekjupalli-1409.github.io/Netflixclone2/)"
+<h3>Aws s3 bucket</h3>
 
+> "Uplaoded my project in Aws s3 [static hosting](https://netflixclone09.s3.eu-north-1.amazonaws.com/index.html)"
 
+<h3>Github static Pages</h3>
 
+> "And also uploaded to github [static pages](https://abhishekjupalli-1409.github.io/Netflixclone2/)"
+
+ #### Updating to bootstrap
+ Soon going to update my project with bootstrap or tailwind css
+ ```
+ https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css
+ ```
+ ```sh
+https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js)
+ ```
+    
