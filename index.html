@@ -9,52 +9,54 @@
 
     <link rel="icon" type="image/x-icon" href="images/Favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <title>Home | Netflix</title>
     <link rel="stylesheet" href="src/styles.css">
     <script src="src/script.js"></script>
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
     <!--Nav bar-->
     <div class="nav">
+        <!-- Hamburger icon for mobile screens -->
+        <div class="hamburger" onclick="toggleMenu()">
+            &#9776; <!-- Hamburger icon -->
+        </div>
+
+        <!-- Netflix Logo and Navbar Links -->
         <div class="nav_left">
             <a href="index.html">
-                <img class="nav_logo" src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg"
-                    alt="logo">
-
+                <img class="nav_logo"
+                    src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="logo">
             </a>
-            <ul class="noList">
+            <ul class="noList" id="menu">
                 <li>Home</li>
                 <li>TV Shows</li>
                 <li>Movies</li>
                 <li>Latest</li>
                 <li>My List</li>
-
             </ul>
-
-
         </div>
+
+        <!-- Search, Bell Icon, and Profile Avatar -->
         <div class="nav_right">
-            <img class="nav_avatar" src="images/Avatar.jpg" alt="profile">
             <ul class="noList2">
                 <li><i class="fa fa-search" id="searching" onclick="toggleSearchBox()"></i></li>
                 <li><i class="fa fa-bell"></i></li>
             </ul>
+            <img class="nav_avatar" src="images/Avatar.jpg" alt="profile">
             <div class="search-container" id="search-container">
                 <input type="text" id="search-box" placeholder="Search">
                 <i class="fa fa-search search-icon"></i>
             </div>
-
         </div>
-
     </div>
 
-    <!--Banner-->
+    <!-- Banner -->
     <header id="banner">
         <div id="banner_contents">
             <h1 id="banner_title"></h1>
@@ -68,8 +70,7 @@
         <div id="banner_fadeBottom"></div>
     </header>
 
-
-    <!--row-->
+    <!-- Row for movies -->
     <div id="headrow">
         <div class="row">
             <h2 class="hi"></h2>
@@ -77,21 +78,34 @@
         </div>
     </div>
 
-
-
+    <!-- JavaScript for Navbar Scroll Effect -->
     <script>
         window.addEventListener("scroll", function () {
             var nav = document.querySelector(".nav");
             nav.classList.toggle("active", window.scrollY > 0);
-        })
+        });
+
+        // Function to toggle the search box
+        function toggleSearchBox() {
+            const searchContainer = document.getElementById('search-container');
+            if (searchContainer.style.display === "block") {
+                searchContainer.style.display = "none";
+            } else {
+                searchContainer.style.display = "block";
+            }
+        }
+
+        // Function to toggle the hamburger menu visibility
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            if (menu.style.display === 'flex') {
+                menu.style.display = 'none';
+            } else {
+                menu.style.display = 'flex';
+                menu.style.flexDirection = 'column'; // Stack items vertically for mobile
+            }
+        }
     </script>
-
-
-
-
-
-
-
 </body>
 
 </html>
