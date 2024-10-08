@@ -12,7 +12,7 @@ Improved the scroll bar using the <strong>web-scrollkit attribute</strong>
 
 > "And also uploaded to github [static pages](https://abhishekjupalli-1409.github.io/Netflixclone2/)"
 
- #### Updating to bootstrap
+ ### Updating to bootstrap
  Soon going to update my project with bootstrap or tailwind css
  ```
  https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css
