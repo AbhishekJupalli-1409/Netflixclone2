@@ -122,7 +122,7 @@ body {
 #banner_contents{
     font-family: 'Times New Roman', Times, serif;
    
-    background-color:rgba(99, 99, 99, 0.293);
+    background-color:rgba(201, 37, 37, 0.293);
     border-radius: 0.2rem;
     
     
@@ -239,7 +239,7 @@ body {
     padding-left: 1rem;
 }
 
-#banner title {
+#banner_title {
     font-size: 3rem;
     font-weight: 800;
     padding-bottom: 0.3rem;
@@ -251,7 +251,7 @@ body {
     padding-top: 1rem;
     font-size: 1rem;
     max-width: 90%;
-    height: 80px;
+    height: 120px;
 }
 
 
@@ -396,3 +396,186 @@ img {
     transform: scale(1.09);
     opacity: 1;
 }
+
+/* FOR 4K SCREENS */
+
+@media only screen and (max-width: 3300px) {
+ 
+  #banner {
+  
+    height: 900px ;
+   
+}
+#banner_title{
+    font-size: 4rem;
+}
+#banner_description{
+    font-size: 2rem;
+    width: 90%;
+}
+#banner_contents {
+  position: relative;
+  top:55%;
+  left: 3%;
+  width: 60%;
+  height: 40%;
+  
+}
+}
+
+/* FOR EXTRA LARGE LAPTOPS */
+@media only screen and (max-width: 2460px) {
+ 
+  #banner {
+  
+    height: 600px;
+   
+}
+#banner_title{
+    font-size: 2rem;
+}
+#banner_description{
+    font-size: 1rem;
+}
+
+#banner_contents {
+  position: relative;
+  top:55%;
+  left: 3%;
+  width: 55%;
+  height: 40%;
+  
+}
+}
+
+
+/* FOR LAPTOPS*/
+@media only screen and (max-width: 1024px) {
+ 
+  #banner {
+  
+    height: 400px !important;
+   
+}
+
+#banner_contents {
+  position: relative;
+  top:45%;
+  left: 3%;
+  width: 65%;
+  height: 50%;
+  
+}
+}
+
+/* FOR TABLETS*/
+@media only screen and (max-width: 768px) {
+ 
+  #banner {
+  
+    height: 400px !important;
+   
+}
+.play{
+   
+    font-size: 0.7rem;
+    margin:0;
+   
+}
+#banner_button{
+    font-size: 0.7rem;
+      margin:0;
+}
+
+#banner_contents {
+  position: relative;
+  top:46%;
+  left: 3%;
+  width: 70%;
+  height: 45%;
+  
+}
+}
+
+
+
+
+/* FOR Large mobile*/
+@media only screen and (max-width: 425px) {
+ 
+  #banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+    height: 400px !important;
+   
+}
+.play{
+   
+    font-size: 0.7rem;
+    margin:0;
+   
+}
+#banner_button{
+    font-size: 0.6rem;
+      margin:0;
+}
+#banner_description{
+    font-size: 0.6rem;
+    margin-left: 0.1rem;
+}
+
+
+.row {
+    margin-left: 0px;
+    color: white;
+
+}
+
+.row_posters {
+    padding-left: 0;
+}
+.row_title{
+    font-size: 1rem;
+}
+#banner_contents {
+  position: relative;
+  top: 25%;
+  left: 3%;
+  width: 70%;
+  height: 45%;
+  
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 957px){}
+
+.noList{
+    display:none;
+}
+
+
+@media only screen and (min-width: 957px) {
+ .noList{
+    display:flex;
+}
+}
+

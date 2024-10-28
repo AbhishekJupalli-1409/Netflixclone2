@@ -51,7 +51,7 @@ try {
             var banner_desc = document.getElementById("banner_description");
 
             banner.style.backgroundImage = "url(" + banner_url + setMovie.backdrop_path + ")";
-            banner_desc.innerText = truncate(setMovie.overview, 200);
+            banner_desc.innerText = truncate(setMovie.overview, 400);
             banner_title.innerText = setMovie.title || setMovie.name;
         } else {
             console.error("No results found.");
