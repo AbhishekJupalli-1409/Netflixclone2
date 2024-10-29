@@ -6,7 +6,7 @@ Improved the scroll bar using the <strong>web-scrollkit attribute</strong>
 
 <h3>Aws s3 bucket</h3>
 
-> "Uplaoded my project in Aws s3 [static hosting](https://netflixclone09.s3.eu-north-1.amazonaws.com/index.html)"
+> "Uplaoded my project in Aws s3 [static hosting](https://netflixclone09.s3.eu-north-1.amazonaws.com/netflixclone09/index.html)"
 
 <h3>Github static Pages</h3>
 
