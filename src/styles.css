@@ -8,6 +8,13 @@
    
 }
 
+#default-search{
+    opacity: 0.3;
+    
+}
+
+
+
 
 *{
   font-family: "Mukta", sans-serif;
@@ -107,7 +114,7 @@ body {
 
 }
 #banner_title{
-    font-size: 3.4rem;
+    font-size: 7rem;
 }
 
 .noList2 li {
@@ -122,8 +129,10 @@ body {
 #banner_contents{
     font-family: 'Times New Roman', Times, serif;
    
-    background-color:rgba(201, 37, 37, 0.293);
+    background-color:rgba(84, 83, 83, 0.293);
     border-radius: 0.2rem;
+    backdrop-filter: blur(2px); /* Apply blur effect */
+    -webkit-backdrop-filter: blur(2px); /* For Safari support */
     
     
     
@@ -222,7 +231,7 @@ body {
 #banner {
     color: white;
     object-fit: contain;
-    height: 460px;
+    
     background-position: center center;
     background-size: cover;
 }
@@ -279,7 +288,7 @@ body {
 .play:hover {
 
     background-color: rgba(197, 192, 192, 0.993);
-    padding-bottom: 0.5rem;
+   
     transition: all 0.3s ease-in;
 }
 
@@ -428,11 +437,12 @@ img {
  
   #banner {
   
-    height: 600px;
+    height: 450px;
    
 }
 #banner_title{
-    font-size: 2rem;
+    font-size: 3rem;
+    margin-bottom: 0px;
 }
 #banner_description{
     font-size: 1rem;
@@ -440,12 +450,19 @@ img {
 
 #banner_contents {
   position: relative;
-  top:55%;
+  top:42%;
   left: 3%;
-  width: 55%;
-  height: 40%;
+  width: 57%;
+  height: 56%;
   
 }
+.play{
+    font-size: smaller;
+}
+#banner_button{
+ font-size: smaller;
+}
+
 }
 
 
@@ -454,16 +471,16 @@ img {
  
   #banner {
   
-    height: 400px !important;
+    height: 350px !important;
    
 }
 
 #banner_contents {
   position: relative;
-  top:45%;
+  top:38%;
   left: 3%;
   width: 65%;
-  height: 50%;
+  height: 59%;
   
 }
 }
@@ -501,7 +518,7 @@ img {
 
 
 /* FOR Large mobile*/
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 426px) {
  
   #banner {
   display: flex;

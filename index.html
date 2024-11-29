@@ -15,6 +15,11 @@
     <link rel="stylesheet" href="src/styles.css">
     <script src="src/script.js"></script>
     
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" />
+<link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
+
+<script src="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/lib/index.min.js"></script>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
@@ -42,13 +47,30 @@
         <div class="nav_right">
             <img class="nav_avatar" src="images/Avatar.jpg" alt="profile">
             <ul class="noList2">
-                <li><i class="fa fa-search" id="searching" onclick="toggleSearchBox()"></i></li>
+               
+                <div class=" relative" style="width: 17rem; ">
+                    <div class="absolute inset-y-0 start-0 flex items-center pl-7 pointer-events-none">
+                        <svg class="w-4 h-4  text-white dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                            fill="grey" viewBox="0 0 20 20">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+                        </svg>
+                    </div>
+                    <input
+                    type="search"
+                    id="default-search"
+                    class="focus:outline-none  block w-full p-2 pl-8 text-sm text-white border border-gray-300 rounded-full bg-gray-800 placeholder-white "
+                    placeholder="Search"
+                    required
+                    />
+
+
+
+                    
+                </div>
                 <li><i class="fa fa-bell"></i></li>
             </ul>
-            <div class="search-container" id="search-container">
-                <input type="text" id="search-box" placeholder="Search">
-                <i class="fa fa-search search-icon"></i>
-            </div>
+           
 
         </div>
 
@@ -59,7 +81,7 @@
 
     <!---------------------Banner------------------>
     <header id="banner">
-        <div id="banner_contents">
+        <div id="banner_contents" class="bg-gray-900/50 backdrop-blur-lg rounded-lg">
             <h1 id="banner_title"></h1>
             <div id="banner_buttons">
                 <button class="play"><i class="fa fa-play"></i>Play</button>
